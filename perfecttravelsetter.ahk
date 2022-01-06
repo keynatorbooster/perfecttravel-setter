@@ -2,33 +2,24 @@
 #SingleInstance, Force
 SetWorkingDir, %A_ScriptDir%
 
-;;not an oficial release, lots of bugs still
 
-global settingsDelay = 100
+;;if the macro bugs a lot, try increasing this number, if you want it to be faster, decrease the number
+global settingsDelay = 50
 
 global lowerFOV = 30
-global lowerSens = 0
-
-
 
 
 global normalFOV = 90
-global normalSens = 85
-
+global normalSens = 74
 
 global diferenceFOV = normalFOV - lowerFOV
-
-global diferenceSens = normalSens - lowerSens
 
 ChangesSettingsDown(){
     Send, {Esc}{Tab 6}{Enter}{Tab}
     Sleep %settingsDelay%
-    Send, {Left %diferenceFOV% * 2}
-    Send, {Left %diferenceFOV% * 2}
-    Sleep 0
+    Send, {Left 151}
     Send, {Tab 6}{Enter}{Tab}{Enter}{Tab}
-    Send, {Left %diferenceSens% * 2}
-    Send, {Left %diferenceSens% * 2}
+    Send, {Left 160}
     Send, {Esc 3}
     Sleep 6
 }
