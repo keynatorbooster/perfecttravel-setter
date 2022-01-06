@@ -34,14 +34,14 @@ ChangesSettingsDown(){
 }
 
 ChangeSettingsUp(){
+    FOVPresses := ceil((diferenceFOV)*1.763)
     Send, {Esc}{Tab 6}{Enter}{Tab}
+    Send, {Right %FOVPresses%}
     Sleep %settingsDelay%
-    Send, {Right %normalFOV% * 2}
-    Send, {Right %normalFOV% * 2}
-    Sleep 0
+    Sleep 120
     Send, {Tab 6}{Enter}{Tab}{Enter}{Tab}
-    Send, {Right %normalSens%}
-    Send, {Right %normalSens%}
+    SensPresses := ceil(normalSens/1.408)
+    Send, {Right %SensPresses%}
     Send, {Esc 3}
     Sleep 6
 }
