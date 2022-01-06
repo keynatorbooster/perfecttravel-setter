@@ -2,6 +2,8 @@
 #SingleInstance, Force
 SetWorkingDir, %A_ScriptDir%
 
+;;not an oficial release, lots of bugs still
+
 global settingsDelay = 100
 
 global lowerFOV = 30
