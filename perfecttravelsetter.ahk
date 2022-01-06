@@ -49,10 +49,12 @@ ChangeSettingsUp(){
 
 #IfWinActive, Minecraft
 {
+    ;;fov and sens all the way down hotkey, make it whatever you want
     ^T::
     ChangesSettingsDown()
     return
 
+    ;;fov and sens back to normal hotkey, make it whatever you want
     ^+T::
     ChangeSettingsUp()
     return
