@@ -4,9 +4,12 @@ SetWorkingDir, %A_ScriptDir%\
 
 SetKeyDelay, 0  ;;if the macro bugs a lot, try increasing this number, if you want it to be faster, decrease the number
 
-global lowerFOV = 30
-global normalFOV = 90
-global normalSens = 74
+
+global normalFOV = 90 ;;this will be your usual FOV
+global normalSens = 74 ;;this will be your usual mouse sensitivity
+
+;;dont change these
+global lowerFOV = 30 
 global diferenceFOV = normalFOV - lowerFOV
 
 ChangesSettingsDown(){
