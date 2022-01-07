@@ -7,18 +7,10 @@ SetKeyDelay, 0  ;;if the macro bugs a lot, try increasing this number, if you wa
 
 global normalFOV = 90 ;;this will be your usual FOV
 global normalSens = 74 ;;this will be your usual mouse sensitivity
-global renderDistance = 16
 
 ;;dont change these
-global rdsend = %renderDistance%-2
 global lowerFOV = 30 
 global diferenceFOV = normalFOV - lowerFOV
-
-
-renderDistanceBack(){
-    Send, {Shift down}{F3 down}{F 32}{Shift up}{F3 up}
-    Send, {F3 down}{F %rdsend%}{F3 up}
-}
 
 SetsDownPerfect(){
     Send, {Esc}{Tab 6}{Enter}{Tab}
@@ -41,12 +33,6 @@ SetsUpPerfect(){
 
 #IfWinActive, Minecraft
 {
-    ;;render distance changer hotkey. make it whatever you want
-    ^+R::
-    renderDistanceBack()
-    return
-
-
     ;;fov and sens all the way down hotkey, make it whatever you want
     ^T::
     SetsDownPerfect()
